@@ -6,6 +6,8 @@ import Home from './Home'
 import Menu from './Menu'
 import Contact from './Contact'
 import Locations from './Locations'
+import MenuItem from './MenuItem'
+import MenuSection from './MenuSection'
 
 class App extends Component {
 
@@ -16,6 +18,8 @@ class App extends Component {
         <Route path='/menu' component={Menu} />
         <Route path='/contact' component={Contact} />
         <Route path='/locations' component={Locations} />
+        <Route path='/MenuItem' component={MenuItem} />
+        <Route path='/MenuSection' component={MenuSection} />
       </Route>
     </Router>
   }

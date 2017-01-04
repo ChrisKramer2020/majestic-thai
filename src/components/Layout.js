@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+
 class Layout extends Component {
 
   static propTypes = {
     children: React.PropTypes.element.isRequired
   }
+
   render () {
-    return <div>
-      <h1>The Majestic Thai </h1>
+    return <div className='layout'>
+      <h1>The Majestic That</h1>
       <nav>
         <ul>
           <li>
@@ -17,7 +19,7 @@ class Layout extends Component {
             <Link to='/menu'>Menu</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            <Link to='/contact'>Contact Us</Link>
           </li>
           <li>
             <Link to='/locations'>Locations</Link>
@@ -28,9 +30,7 @@ class Layout extends Component {
         {this.props.children}
       </main>
       <footer>
-        <p>
-          &copy; 2017 The Majestic Thai. Built with &hearts; at the Iron Yard, in St Petersburg, Florida.
-        </p>
+        <p>&copy; 2017 The Majestic That.<br />Built with &hearts; at The Iron Yard, in St Petersburg, Florida.</p>
       </footer>
     </div>
   }
