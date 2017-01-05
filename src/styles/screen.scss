@@ -4,15 +4,40 @@ html {
   text-size-adjust: 100%;
 }
 
+// fonts {
+// font-family: 'Cormorant Garamond', serif;
+// font-family: 'Proza Libre', sans-serif;
+// font-family: 'Libre Franklin', sans-serif;
+// font-family: 'Libre Baskerville', serif;
+// font-family: 'Trirong', serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Work Sans', sans-serif;
+// font-family: 'Taviraj', serif;
+// font-family: 'Eczar', serif;
+// font-family: 'Gentium Basic', serif;
+// font-family: 'Sonsie One', cursive;
+// }
+
 body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');
 }
 
 body,
 #root,
 .layout {
   min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Sonsie One', cursive;
+  font-style: cursive;
+  position: relative;
+  top: 50px;
 }
 
 .layout {
@@ -32,8 +57,74 @@ nav ul {
   padding-left: 0;
   display: flex;
   list-style: none;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  flex: 1;
 
   li {
-    margin: 1em;
+    padding: 15px;
+    position: relative;
+    top: 20px;
+    font-family: fantasy;
+    flex-flow: row;
+    flex: 100px;
+    width: 100%;
+    font-size: 18px;
+    flex-direction: row;
+    justify-content: space-between;
+
   }
 }
+
+footer {
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+@keyframes example {
+  from {background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');}
+  to {background-image: url('https://wallpaperscraft.com/image/restaurant_table_interior_modern_style_39288_3840x2160.jpg');}
+}
+
+@keyframes identifier {
+  from {background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');}
+  to {background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
+}
+
+body {
+  background-size: 106%;
+  animation-name: example;
+  animation-iteration-count: 1;
+  animation-duration: 20s;
+  animation-delay: 6s;
+  animation-timing-function: ease-in 5s;
+  animation-timing-function: linear 20s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.layout {
+  background-size: 106%;
+  animation-name: identifier;
+  animation-iteration-count: 1;
+  animation-duration: 20s;
+  animation-delay: 28s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear 20s;
+  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in 5s;
+  animation-direction: alternate-reverse;
+  background-size: 106%;
+}
+
+.categories {
+  top: 0px;
+  color: white;
+  position: relative;
+}
+
+// .border {
+//
+// }
