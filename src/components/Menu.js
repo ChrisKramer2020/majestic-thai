@@ -1,37 +1,28 @@
 import React, { Component } from 'react'
-import MenuSection from './MenuSection'
-import menuItems from '../menu.json'
+import { Link } from 'react-router'
+import data from '../data.json'
 
 class Menu extends Component {
 
   render () {
-    // console.log()
-    //
-    // const categories = [
-    //   <li>Appetizers</li>,
-    //   <li>Entrees</li>,
-    //   <li>Deserts</li>,
-    //   <li>Dan's Specials</li>
-    // ]
-
-    const categories = menuItems.categories.map((category, i) => {
-      return <li key={i}>{category.name}</li>
+    const categories = data.menu.map((category, i) => {
+      return <li key={i}>
+        <Link to={`/menu/${category.slug}`} activeClassName='active'>
+          {category.name}
+        </Link>
+      </li>
     })
 
-    const sections = menuItems.categories.map((category, i) => {
-      return <MenuSection name={category.name} items={category.items} key={i} />
-    })
-
-    return <div>
+    return <div className='bro'>
       <h2>Our Menu</h2>
 
-      <section className='categories'>
-        <ul>
+      <section className='ourmenu'>
+        <ul className='swag'>
           {categories}
         </ul>
       </section>
 
-      {sections}
+      {this.props.children}
     </div>
   }
 }

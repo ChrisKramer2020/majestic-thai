@@ -9,11 +9,11 @@ class Layout extends Component {
 
   render () {
     return <div className='layout'>
-      <h1>The Majestic Thai</h1>
-      <div className='border'>
+      <section id='flow'>
+        <h1>The Majestic Thai</h1>
         <nav>
-          <ul>
-            <li>
+          <ul id='juicier'>
+            <li id='juicy'>
               <Link to='/'>Home</Link>
             </li>
             <li>
@@ -27,9 +27,14 @@ class Layout extends Component {
             </li>
           </ul>
         </nav>
-      </div>
-      {/* <div className='pics'>
-        <img src='https://4.bp.blogspot.com/-3FgGGBWeT8M/U8ITYqmAePI/AAAAAAABCrU/TNYq6fLr_Mg/s0/Urban+Park+Hotel+and+Spa%252C+Umhlanga+3.jpg' alt='4krestaraunt' width='100%' height='80%' />
+      </section>
+      {/* <div id='aside'>
+        <aside>
+          <Link to='/home'><b>How it all began.</b></Link>
+          <p>A little story about a boy
+            <p> who came from Thailand </p>
+            <p>determined to be the best.</p></p>
+        </aside>
       </div> */}
       <main>
         {this.props.children}

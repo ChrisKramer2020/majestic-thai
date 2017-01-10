@@ -2,6 +2,8 @@
 
 html {
   text-size-adjust: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 // fonts {
@@ -22,8 +24,9 @@ body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');
+  background-size: 106%;
+  // background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');
+  // background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');
 }
 
 body,
@@ -34,23 +37,85 @@ body,
 
 h1 {
   color: #fff;
-  font-family: 'Sonsie One', cursive;
+  font-family: 'Eczar', serif;
   font-style: cursive;
+  font-stretch: expanded;
+  text-align: center;
   position: relative;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   top: 50px;
+}
+
+#aside {
+  flex-direction: column;
+  float: left;
+  display: flex;
+  align-items: left;
+  position: relative;
+  right: 450px;
+  background: linear-gradient(rgb(78,42,99)rgb(44,29,62)rgb(16,42,19));
+  margin-right: 15px;
+    p {
+      margin-right: 15px;
+
+    }
 }
 
 .layout {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
+}
+
+table {
+  padding: 25px;
+  background-color: rgba(#04010f, 0.75);
+}
+
+td {
+  color: white;
+}
+
+th {
+  color: white;
 }
 
 main {
   max-width: 760px;
   margin: 1em auto;
-  padding: 1em;
+  list-style-type: none;
   flex: 1;
+  flex-direction: row;
+  position: relative;
+    ul {
+      display: flex;
+      position: relative;
+    }
+}
+
+#flow {
+  align-items: top;
+  position: relative;
+  background: linear-gradient(left to right, #7e7777 , #222);
+}
+
+#juicier {
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  text-align: center;
+  top: -50px;
+  flex-direction: row;
+  padding: 50px;
+  flex: 1;
+    #juicy {
+      text-align: center;
+      align-items: center;
+      // justify-content: space-between;
+      // flex-direction: row;
+    }
 }
 
 nav ul {
@@ -58,73 +123,177 @@ nav ul {
   display: flex;
   list-style: none;
   position: relative;
-  width: 100%;
+  // width: 80%;
   justify-content: space-between;
   flex: 1;
+  // top: -10px;
+  flex-direction: row;
+}
+    nav li:hover {
+      background: #b899f1;
+      border-color: #f4eee1;
+      animation: moveFromBottom 300ms ease-in-out;
+      color: #FFF;
+      text-shadow: 0px 0px 1px rgb(62,24,12);
+      animation: moveFromBottom 300ms ease-in-out;
+      animation-name: justice;
+      animation-iteration-count: 1;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+}
 
-  li {
-    padding: 15px;
-    position: relative;
-    top: 20px;
-    font-family: fantasy;
-    flex-flow: row;
-    flex: 100px;
-    width: 100%;
-    font-size: 18px;
-    flex-direction: row;
-    justify-content: space-between;
+@keyframes moveFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
 
-  }
+@keyframes moveFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+ul.swag {
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  list-style-type: none;
+  float: right;
+  right: -50px;
+}
+
+.swag {
+  list-style-type: none;display: flex;
+  flex-direction: row;
+  display: flex;
+  flex: 10;
+  position: relative;
+  justify-content: space-around;
+  justify-content: space-between;
+  list-style-type: none;
+    li{
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      margin-bottom: 25px;
+    }
+}
+
+.ourmenu {
+  justify-content: space-between;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;display: flex;
+  position: relative;
+  right: 50px;
+  opacity: 10px;
+    ul {
+      justify-content: space-between;
+      flex: 1;
+      display: inline-flex;
+      right: -35px;
+      flex-direction: row;
+      list-style-type: none;
+      position: relative;
+    }
+}
+
+h2 {
+  text-align: center;
+  position: relative;
+  top: -100px;
+  color: white;
+  margin-bottom: -90px;
+}
+
+p {
+  color: white;
+  top: 0px;
 }
 
 footer {
   text-align: center;
   align-items: center;
   color: #fff;
+  font-size: 10px;
+}
+
+// @keyframes example {
+//   from {background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');}
+//   to {background-image: url('https://wallpaperscraft.com/image/restaurant_table_interior_modern_style_39288_3840x2160.jpg');}
+// }
+
+@keyframes justice {
+  nav {animation-timing-function: ease-in;}
+
+}
+
+.contact {
+  margin-top: 0px;
+}
+
+form {
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px;
+    input {
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      margin: 25px;
+        p {
+          margin: 25px;
+            textarea {
+              margin: 25px;
+                label {
+                  margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+label {
+  margin-right: 20px;
+}
+
+ @keyframes identifier {
+ from {background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');}
+ to {background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
 }
 
 @keyframes example {
-  from {background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');}
-  to {background-image: url('https://wallpaperscraft.com/image/restaurant_table_interior_modern_style_39288_3840x2160.jpg');}
+  from{background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
+  to{background-image: url('https://wallpaperscraft.com/image/restaurant_table_interior_modern_style_39288_3840x2160.jpg');}
 }
 
-@keyframes identifier {
-  from {background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');}
-  to {background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
-}
 
-body {
-  background-size: 106%;
-  animation-name: example;
-  animation-iteration-count: 1;
-  animation-duration: 20s;
-  animation-delay: 6s;
-  animation-timing-function: ease-in 5s;
-  animation-timing-function: linear 20s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.layout {
-  background-size: 106%;
+  .layout {
   animation-name: identifier;
   animation-iteration-count: 1;
-  animation-duration: 20s;
-  animation-delay: 28s;
+  animation-duration: 15s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
-  animation-timing-function: linear 20s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   animation-timing-function: ease-in 5s;
-  animation-direction: alternate-reverse;
+  animation-direction: forwards;
   background-size: 106%;
 }
 
-.categories {
-  top: 0px;
-  color: white;
-  position: relative;
+a {
+  justify-content: space-between;
 }
-
-// .border {
-//
-// }

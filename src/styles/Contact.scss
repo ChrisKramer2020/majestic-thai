@@ -1,0 +1,16 @@
+.Contact {
+  form {
+    max-width: 400px;
+    text-align: left;
+    align-items: center;
+    background-color: gray;
+    p label {
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+  }
+}
