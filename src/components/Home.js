@@ -5,10 +5,11 @@ class Home extends Component {
   render () {
     return <div id='aside'>
       <aside>
-        <Link to='/contact'><b>How it all began.</b></Link>
-        <p>A little story about a boy
+        <Link to='/contact' />
+        {/* <p>A little story about a boy
+          <b>How it all began.</b
           <p> who came from Thailand </p>
-          <p>determined to be the best.</p></p>
+          <p>determined to be the best.</p></p> */}
       </aside>
     </div>
   }

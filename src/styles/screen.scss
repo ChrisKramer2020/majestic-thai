@@ -25,7 +25,7 @@ body {
   font: $base-text-size / 1 $base-font-family;
   background-repeat: no-repeat;
   background-size: 106%;
-  // background-image: url('https://4.bp.blogspot.com/-5PAj4q1KLpI/Uh7yu-p9AnI/AAAAAAAAHac/QHvRBZt8MfE/s0/La+Gondola+Italian+Restaurant+2560x1600.jpg');
+  background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');
   // background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');
 }
 
@@ -38,14 +38,13 @@ body,
 h1 {
   color: #fff;
   font-family: 'Eczar', serif;
-  font-style: cursive;
   font-stretch: expanded;
   text-align: center;
   position: relative;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  top: 50px;
+  // font-size: 20px;
+  // margin-top: 20px;
+  margin-bottom: 50px;
+  // top: 50px;
 }
 
 #aside {
@@ -54,11 +53,10 @@ h1 {
   display: flex;
   align-items: left;
   position: relative;
+  top: -200px;
   right: 480px;
   background: linear-gradient(rgb(78,42,99)rgb(44,29,62)rgb(16,42,19));
-  margin-right: 15px;
     p {
-      margin-right: 15px;
 
     }
 }
@@ -122,6 +120,7 @@ nav ul {
   padding-left: 0;
   display: flex;
   list-style: none;
+  margin-bottom: 50px;
   position: relative;
   // width: 80%;
   justify-content: space-between;
@@ -129,17 +128,29 @@ nav ul {
   // top: -10px;
   flex-direction: row;
 }
+  nav h1:hover {
+    animation-timing-function: linear;
+    animation: moveFromBottom 300ms ease-in-out;
+    border-color: #f4eee1;
+    transform: translateY(-20px);
+    animation-name: justice;
+    transition-duration: 2s;
+  }
     nav li:hover {
       background: #b899f1;
       border-color: #f4eee1;
-      animation: moveFromBottom 300ms ease-in-out;
+      animation: moveFromBottom 800ms ease-in-out;
       color: #FFF;
       text-shadow: 0px 0px 1px rgb(62,24,12);
-      animation: moveFromBottom 300ms ease-in-out;
+      animation: moveFromBottom 800ms ease-in-out;
+      transform: translateY(20px);
       animation-name: justice;
       animation-iteration-count: 1;
-      animation-duration: 3s;
+      animation-duration: 0.42;
+      transition-duration: 2s;
       animation-timing-function: linear;
+    nav li:active {
+    }
 }
 
 @keyframes moveFromBottom {
@@ -267,19 +278,89 @@ form {
     }
 }
 
+ // .carousel{
+//     overflow:hidden;
+//     width:100%;
+//     position: relative;
+//     background-color: transparent;
+// }
+// .panes{
+//     list-style:none;
+//     position:relative;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     display: flex;
+//     width:100%; /* Number of panes * 100% */
+//     overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+//
+//     -moz-animation:carousel 40s infinite;
+//     -webkit-animation:carousel 40s infinite;
+//     animation:carousel 80s linear infinite;
+//     animation-delay: 2s;
+// }
+// .panes > li{
+//   justify-content: space-between;
+//     width:100%; /* 100 / number of panes */
+// }
+// .carousel img{
+//     width:100%;
+//     height: 100%;
+//     justify-content: space-between;
+//     display: inline-block;
+//     max-width:100%;
+// }
+// .carousel h2{
+//     font-size:1em;
+//     padding:0.5em;
+//     position:absolute;
+//     color:#fff;
+// }
+//
+// @keyframes carousel {
+//     0% { left: 0;}
+//     50% { left: -100%;}
+//     100% { right: 150%;}
+
+// 35% { left:-15%;}
+// 35% { left:-15%;}
+// 35% { left:-15%;}
+//     23.5% { left:-200%;}
+//     23.5% { left:-200%;}
+//     23.5% { left:-200%;}
+//
+// }
+    // 0%    { left:0; }
+    // 11%   { left:0; }
+    // 12.5% { left:-100%; }
+    // 23.5% { left:-100%; }
+    // 25%   { left:-200%; }
+    // 36%   { left:-200%; }
+    // 37.5% { left:-300%; }
+    // 48.5% { left:-300%; }
+    // 50%   { left:-400%; }
+    // 61%   { left:-400%; }
+    // 62.5% { left:-300%; }
+    // 73.5% { left:-300%; }
+    // 75%   { left:-200%; }
+    // 86%   { left:-200%; }
+    // 87.5% { left:-100%; }
+    // 98.5% { left:-100%; }
+    // 100%  { left:0; }
+
+
 label {
   margin-right: 20px;
 }
 
- @keyframes identifier {
- from {background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');}
- to {background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
-}
-
-@keyframes example {
-  from{background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
-  to{background-image: url('https://wallpaperscraft.com/image/restaurant_table_interior_modern_style_39288_3840x2160.jpg');}
-}
+//  @keyframes identifier {
+//  from {background-image: url('https://4.bp.blogspot.com/-s_bEGUR7TUo/VIc5Z0sg04I/AAAAAAABZGs/yd3ZvekQJjg/s0/Glass%2Bof%2BRed%2BWine%2BUHD.jpg');}
+//  to {background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
+// }
+//
+// @keyframes example {
+//   from{background-image: url('https://4.bp.blogspot.com/-oOi05TEQ-rw/VdIm7bq0dDI/AAAAAAABxjg/7JkfL4gEY64/s0/Wine_Candlelight_uhd.jpg');}
+//   to{background-image: url('https://wallpaperscraft.com/image/restaurant_table_interior_modern_style_39288_3840x2160.jpg');}
+// }
 
 
   .layout {
